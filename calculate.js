@@ -2,7 +2,7 @@ var hasError = false;
 
 function validate(name, min, max) {
   var input = $("#"+name);
-  var text = input.val();
+  var text = input.val().replace(',', '.');
   var value = parseFloat(text, 10);
   if (isNaN(value)) {
     //$(name).setCustomValidity("Enter a number");
@@ -158,14 +158,14 @@ $(document).ready(function(){
      $("#warning").text("");
 
      //var age = parseInt($("#age").text(), 10);
-     var age = validate("age", 0, 150)
-     var hb = validate("hb", 0, 100)
-     var mcv = validate("mcv", 0, 1000)
-     var rdwcv = validate("rdwcv", 0, 100)
-     var eosinophils = validate("eosinophils", 0, 1)
-     var platelets = validate("platelets", 0, 1000)
-     var monocytes = validate("monocytes", 0, 10)
-     var basophils = validate("basophils", 0, 10)
+     var age = validate("age", 0, 150);
+     var hb = validate("hb", 0, 1000)/10;
+     var mcv = validate("mcv", 0, 1000);
+     var rdwcv = validate("rdwcv", 0, 100);
+     var eosinophils = validate("eosinophils", 0, 1);
+     var platelets = validate("platelets", 0, 1000);
+     var monocytes = validate("monocytes", 0, 10);
+     var basophils = validate("basophils", 0, 10);
 
      if(hasError){
          return;
