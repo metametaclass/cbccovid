@@ -3,9 +3,32 @@ html {
     height: 100%;
     font-family: Tahoma, Verdana, Geneva; /*arial, helvetica, sans-serif;*/
 }
-
+span {
+    color: black;
+}
+.error-input {
+    border: solid red 1px;
+}
+.error-label {
+    color: red;
+}
 .warning {
     font-weight: bold;
-    font-size: 16px;
-    color: orange;
+    font-size: 14px;
+    color: red;
+    height: 15px;
+}
+.result {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    height: 15px;
+
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

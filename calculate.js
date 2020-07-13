@@ -2,39 +2,44 @@ var hasError = false;
 
 function validate(name, min, max) {
   var input = $("#"+name);
+  var p = $("#p-"+name);
   var text = input.val().replace(',', '.');
   var value = parseFloat(text, 10);
+  var label = $("#text-"+name);
   if (isNaN(value)) {
     //$(name).setCustomValidity("Enter a number");
     console.warn("invalid number in", name);
-    var label = $("#text-"+name);
     if(!hasError){
-      $("#warning").text("Введите поле \""+label.text()+"\"");
-      $(input).focus();
-      $(input).addClass("error-input");
+      //$("#warning").text("Введите поле \""+label.text()+"\"").addClass("warning");
+      $(input).focus().addClass("error-input");
+      $(label).addClass("error-label");
     }
     hasError = true;
     return value;
   }
   if (min!=null && value<min) {
     console.warn("too low value in",name)
-    var label = $("#text-"+name)
     if(!hasError){
       $("#warning").text("Значение поля \""+label.text()+"\" ниже допустимого");
+      $(input).focus().addClass("error-input");
+      $(label).addClass("error-label");
     }
     hasError = true;
     return value;
   }
   if (max!=null && value>max) {
     console.warn("too high value in",name)
-    var label = $("#text-"+name)
     if(!hasError){
       $("#warning").text("Значение поля \""+label.text()+"\" выше допустимого");
+      $(input).focus().addClass("error-input");
+      $(label).addClass("error-label");
     }
     hasError = true;
     return value;
   }
-
+  $(input).removeClass("error-input");
+  $(label).removeClass("error-label");
+  //$("#warning").empty();
   return value
 }
 
