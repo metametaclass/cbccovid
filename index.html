@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Расчет вероятности COVID-19 по данным анализа крови</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="calculate.js"></script>
+</head>
+
+<body>
+ <a href="https://www.rcpjournals.org/content/clinmedicine/early/2020/06/30/clinmed.2020-0373/tab-figures-data">Ссылка на исследование</a> 
+ <p>
+ <form id="calc-form">
+   <label className="label-age" style="" htmlFor="age"><span className="middle" id="text-age">age/возраст (лет)</span>
+      <input name="age" type="text" id="age"/>
+   </label>
+   <p>
+
+   <label className="label-hb" style="" htmlFor="hb"><span className="middle" id="text-hb">Hb/Гемоглобин (г/100 мл)</span>
+      <input name="hb" type="text" id="hb"/>
+   </label>
+   <p>
+
+   <label className="label-mcv" style="" htmlFor="mcv"><span className="middle" id="text-mcv">MCV/Средний объем эритроцита (фл, фемтолитры)</span>
+      <input name="mcv" type="text" id="mcv"/>
+   </label>
+   <p>
+
+   <label className="label-rdvcv" style="" htmlFor="rdvcv"><span className="middle" id="text-rdvcv">RDV.CV/Распределение эритроцитов по объёму, %</span>
+      <input name="rdvcv" type="text" id="rdvcv"/>
+   </label>
+   <p>
+
+   <label className="label-eosinophils" style="" htmlFor="eosinophils"><span className="middle" id="text-eosinophils">Eosinophils/Эозинофилы, тысяч штук в микролитре (абсолютное число)</span>
+      <input name="eosinophils" type="text" id="eosinophils"/>
+   </label>
+   <p>
+
+   <label className="label-platelets" style="" htmlFor="platelets"><span className="middle" id="text-platelets">Platelets/Тромбоциты, тысяч штук в микролитре (абсолютное число)</span>
+      <input name="platelets" type="text" id="platelets"/>
+   </label>
+   <p>
+
+   <label className="label-monocytes" style="" htmlFor="monocytes"><span className="middle" id="text-monocytes">Monocytes/Моноциты, тысяч штук в микролитре (абсолютное число)</span>
+      <input name="monocytes" type="text" id="monocytes"/>
+   </label>
+   <p>
+
+   <label className="label-basophils" style="" htmlFor="basophils"><span className="middle" id="text-basophils">Basophils/Базофилы, тысяч штук в микролитре (абсолютное число).</span>
+      <input name="basophils" type="text" id="basophils"/>
+   </label>
+   <p>
+
+   <div className="warning" id="warning"></div>
+
+   <input type="submit"/>
+ </form>
+</body>
+</html>
+
