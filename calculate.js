@@ -3,13 +3,15 @@ var hasError = false;
 function validate(name, min, max) {
   var input = $("#"+name);
   var text = input.val();
-  var value = parseFloat(text, 10); 
+  var value = parseFloat(text, 10);
   if (isNaN(value)) {
     //$(name).setCustomValidity("Enter a number");
-    console.warn("invalid number in", name)
-    var label = $("#text-"+name)
+    console.warn("invalid number in", name);
+    var label = $("#text-"+name);
     if(!hasError){
-      $("#warning").text("Введите поле \""+label.text()+"\"");   
+      $("#warning").text("Введите поле \""+label.text()+"\"");
+      $(input).focus();
+      $(input).addClass("error-input");
     }
     hasError = true;
     return value;
@@ -69,31 +71,31 @@ var ageTable = [
  ];
 
 
-var hbTable = [ 
+var hbTable = [
    {from: 0,  to: 10, output: 0},
    {from: 10, to: 11, output: 2},
    {from: 11, to: 12, output: 4},
-   {from: 12, to: 13, output: 6}, 
+   {from: 12, to: 13, output: 6},
    {from: 13, to: 14, output: 9},
    {from: 14, to: 15, output: 11},
    {from: 15, to: 16, output: 13},
-   {from: 16, to: 999, output: 15} 
+   {from: 16, to: 999, output: 15}
  ];
 
 
-var mcvTable = [ 
+var mcvTable = [
    {from: 0,  to: 90, output: 19},
    {from: 90, to: 999, output: 0}
  ];
 
 
-var rdwcvTable = [ 
+var rdwcvTable = [
    {from: 0,  to: 14.5, output: 12},
    {from: 14.5,  to: 100, output: 0}
  ];
 
 
-var eosinophilsTable = [ 
+var eosinophilsTable = [
    {from: 0,     to: 0.05, output: 100},
    {from: 0.05,  to: 0.1,  output: 88},
    {from: 0.1,   to: 0.15, output: 75},
@@ -105,17 +107,17 @@ var eosinophilsTable = [
    {from: 0.4,   to: 999,  output: 0},
  ];
 
-var plateletsTable = [ 
+var plateletsTable = [
    {from: 0,  to: 180, output: 17},
    {from: 180,  to: 999, output: 0},
  ];
 
-var monocytesTable = [ 
+var monocytesTable = [
    {from: 0,   to: 0.7, output: 12},
    {from: 0.7, to: 999, output: 0},
  ];
 
-var basophilsTable = [ 
+var basophilsTable = [
    {from: 0.01,  to: 0.02, output: 17},
    {from: 0.02,  to: 0.03, output: 14},
    {from: 0.03,  to: 0.04, output: 12},
@@ -128,7 +130,7 @@ var basophilsTable = [
 
 
 var probabilityTable = [
-    {from: 0,   to:133, output:0}, 
+    {from: 0,   to:133, output:0},
     {from: 133, to:153, output:1},
     {from: 153, to:162, output:5},
     {from: 162, to:172, output:10},
@@ -152,7 +154,7 @@ $(document).ready(function(){
      console.log('submit');
      event.preventDefault();
 
-     hasError = false; 
+     hasError = false;
      $("#warning").text("");
 
      //var age = parseInt($("#age").text(), 10);
@@ -188,6 +190,6 @@ $(document).ready(function(){
               findRange1("basophils", basophils, basophilsTable);
 
      $("#result").text("Результат: "+points.toString()+" Вероятность COVID:"+findRange(points, probabilityTable)+"%");
-      
+
   });
 });
