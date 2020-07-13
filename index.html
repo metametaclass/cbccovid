@@ -4,12 +4,13 @@
 <head>
     <title>Расчет вероятности COVID-19 по данным анализа крови</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="calc.css"/>
     <script src="jquery-1.11.0.min.js"></script>
     <script src="calculate.js"></script>
 </head>
 
 <body>
- <a href="https://www.rcpjournals.org/content/clinmedicine/early/2020/06/30/clinmed.2020-0373/tab-figures-data">Ссылка на исследование</a> 
+ <a href="https://www.rcpjournals.org/content/clinmedicine/early/2020/06/30/clinmed.2020-0373/tab-figures-data">Ссылка на исследование</a>
  <p>
  <form id="calc-form">
    <label className="label-age" style="" htmlFor="age"><span className="middle" id="text-age">age/возраст (лет)</span>
@@ -52,7 +53,7 @@
    </label>
    <p>
 
-   <div className="warning" id="warning"></div>
+   <div class="warning" id="warning"></div>
    <div className="result" id="result"></div>
 
    <input type="submit" value="Рассчитать"/>
