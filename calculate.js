@@ -194,8 +194,9 @@ $(document).ready(function(){
               findRange1("platelets", platelets, plateletsTable)+
               findRange1("monocytes", monocytes, monocytesTable)+
               findRange1("basophils", basophils, basophilsTable);
-
-     $("#result").text("Результат: "+points.toString()+" Вероятность COVID:"+findRange(points, probabilityTable)+"%");
+    var result = findRange(points, probabilityTable);
+    var resultText = (points>181)?" высокая, ": " низкая, ";
+     $("#result").text("Результат: "+points.toString()+", вероятность COVID-19 " + resultText + result + "%");
 
   });
 });

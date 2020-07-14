@@ -6,9 +6,19 @@ html {
 span {
     color: black;
 }
+.container-div {
+    float: left;
+    width: auto;
+}
 .label-div {
+    width: 65%;
+    float: left;
+    margin-top: 6px;
+}
+.input-div {
     width: 35%;
     float: left;
+    margin-top: 6px;
 }
 .error-input {
     border: solid red 1px;
@@ -21,24 +31,33 @@ span {
     font-size: 14px;
     color: red;
     height: 15px;
+    width: 100%;
+    float: left;
 }
 .result {
     font-weight: bold;
     font-size: 14px;
     color: black;
-    height: 15px;
+    height: 20px;
+    width: 100%;
+    float: left;
 
 }
-.hide {
-    display: none;
+.submit-div {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+.footer-div {
+    margin-top: 20px;
+    float: left;
 }
 
-.show {
-    display: block;
-}
 input[type="submit"] {
     height: 30px;
-    width: 100px;
+    width: 140px;
     border: solid gray 1px;
     border-radius: 2px;
+    float: left;
 }
+
