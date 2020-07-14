@@ -141,7 +141,7 @@ var probabilityTable = [
     {from: 153, to:162, output:5},
     {from: 162, to:172, output:10},
     {from: 172, to:179, output:20},
-    {from: 179, to:191, output:30},
+    {from: 179, to:181, output:30},
     {from: 181, to:184, output:33},
     {from: 184, to:189, output:40},
     {from: 189, to:194, output:50},
