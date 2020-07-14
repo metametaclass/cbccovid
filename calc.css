@@ -6,6 +6,10 @@ html {
 span {
     color: black;
 }
+.label-div {
+    width: 35%;
+    float: left;
+}
 .error-input {
     border: solid red 1px;
 }
@@ -31,4 +35,10 @@ span {
 
 .show {
     display: block;
+}
+input[type="submit"] {
+    height: 30px;
+    width: 100px;
+    border: solid gray 1px;
+    border-radius: 2px;
 }

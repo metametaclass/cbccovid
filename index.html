@@ -14,50 +14,87 @@
  <a href="table.jpg">Ссылка на таблицу</a>
  <p>
  <form id="calc-form">
-   <label class="label-age" style="" htmlFor="age"><span class="middle" id="text-age">age/возраст (лет)</span>
-      <input name="age" type="text" id="age"/>
-   </label>
+  <div class="row">
+      <div class="label-div">
+        <label class="label-age" style="" htmlFor="age">
+            <span class="middle" id="text-age">age/возраст (лет)</span>
+        </label>
+      </div>
+      <div class="input-div"><input name="age" type="text" id="age"/></div>
+
    <p class="error-text" id="p-age"></p>
+  </div>
+  <div class="row">
+      <div class="label-div">
+        <label class="label-hb" style="" htmlFor="hb">
+            <span class="middle" id="text-hb">Hb/Гемоглобин (г/л)</span>
+        </label>
+      </div>
+      <div class="input-div"><input name="hb" type="text" id="hb"/></div>
+      <p class="error-text" id="p-hb"></p>
+   </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-mcv" style="" htmlFor="mcv">
+            <span class="middle" id="text-mcv">MCV/Средний объем эритроцита (фл, фемтолитры)</span>
+          </label>
+        </div>
+      <div class="input-div"><input name="mcv" type="text" id="mcv"/></div>
+      <p class="error-text" id="p-mcv"></p>
+  </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-rdwcv" style="" htmlFor="rdwcv">
+            <span class="middle" id="text-rdwcv">RDW.CV/Распределение эритроцитов по объёму, %</span>
+          </label>
+      </div>
+      <div class="input-div"><input name="rdwcv" type="text" id="rdwcv"/></div>
+      <p class="error-text" id="p-rdwcv"></p>
+  </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-eosinophils" style="" htmlFor="eosinophils">
+              <span class="middle" id="text-eosinophils">Eosinophils/Эозинофилы, тысяч штук в микролитре (абсолютное число)
+              </span>
+          </label>
+      </div>
+      <div class="input-div"><input name="eosinophils" type="text" id="eosinophils"/></div>
+      <p class="error-text" id="p-eosinophils"></p>
+  </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-platelets" style="" htmlFor="platelets">
+              <span class="middle" id="text-platelets">Platelets/Тромбоциты, тысяч штук в микролитре (абсолютное число)
+              </span>
+          </label>
+      </div>
+      <div class="input-div"><input name="platelets" type="text" id="platelets"/></div>
+      <p class="error-text" id="p-platelets"></p>
+   </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-monocytes" style="" htmlFor="monocytes">
+              <span class="middle" id="text-monocytes">Monocytes/Моноциты, тысяч штук в микролитре (абсолютное число)
+              </span>
+          </label>
+      </div>
+      <div class="input-div"><input name="monocytes" type="text" id="monocytes"/></div>
+      <p class="error-text" id="p-monocytes"></p>
+  </div>
+  <div class="row">
+      <div class="label-div">
+          <label class="label-basophils" style="" htmlFor="basophils">
+              <span class="middle" id="text-basophils">Basophils/Базофилы, тысяч штук в микролитре (абсолютное число).
+              </span>
+          </label>
+      </div>
+      <div class="input-div"><input name="basophils" type="text" id="basophils"/></div>
+      <p class="error-text" id="p-basophils"></p>
+  </div>
+  <div class="warning" id="warning"></div>
+  <div class="result" id="result"></div>
 
-   <label class="label-hb" style="" htmlFor="hb"><span class="middle" id="text-hb">Hb/Гемоглобин (г/л)</span>
-      <input name="hb" type="text" id="hb"/>
-   </label>
-   <p class="error-text" id="p-hb"></p>
-
-   <label class="label-mcv" style="" htmlFor="mcv"><span class="middle" id="text-mcv">MCV/Средний объем эритроцита (фл, фемтолитры)</span>
-      <input name="mcv" type="text" id="mcv"/>
-   </label>
-   <p class="error-text" id="p-mcv"></p>
-
-   <label class="label-rdwcv" style="" htmlFor="rdwcv"><span class="middle" id="text-rdwcv">RDW.CV/Распределение эритроцитов по объёму, %</span>
-      <input name="rdwcv" type="text" id="rdwcv"/>
-   </label>
-   <p class="error-text" id="p-rdwcv"></p>
-
-   <label class="label-eosinophils" style="" htmlFor="eosinophils"><span class="middle" id="text-eosinophils">Eosinophils/Эозинофилы, тысяч штук в микролитре (абсолютное число)</span>
-      <input name="eosinophils" type="text" id="eosinophils"/>
-   </label>
-   <p class="error-text" id="p-eosinophils"></p>
-
-   <label class="label-platelets" style="" htmlFor="platelets"><span class="middle" id="text-platelets">Platelets/Тромбоциты, тысяч штук в микролитре (абсолютное число)</span>
-      <input name="platelets" type="text" id="platelets"/>
-   </label>
-   <p class="error-text" id="p-platelets"></p>
-
-   <label class="label-monocytes" style="" htmlFor="monocytes"><span class="middle" id="text-monocytes">Monocytes/Моноциты, тысяч штук в микролитре (абсолютное число)</span>
-      <input name="monocytes" type="text" id="monocytes"/>
-   </label>
-   <p class="error-text" id="p-monocytes"></p>
-
-   <label class="label-basophils" style="" htmlFor="basophils"><span class="middle" id="text-basophils">Basophils/Базофилы, тысяч штук в микролитре (абсолютное число).</span>
-      <input name="basophils" type="text" id="basophils"/>
-   </label>
-   <p class="error-text" id="p-basophils"></p>
-
-   <div class="warning" id="warning"></div>
-   <div class="result" id="result"></div>
-
-   <input type="submit" value="Рассчитать"/>
+  <div class="input-div"><input type="submit" value="Рассчитать"/>
  </form>
 </body>
 </html>

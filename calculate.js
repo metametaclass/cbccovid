@@ -6,6 +6,7 @@ function validate(name, min, max) {
   var text = input.val().replace(',', '.');
   var value = parseFloat(text, 10);
   var label = $("#text-"+name);
+  $(".result").empty();
   if (isNaN(value)) {
     //$(name).setCustomValidity("Enter a number");
     console.warn("invalid number in", name);
