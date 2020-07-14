@@ -26,22 +26,18 @@ span {
 .error-label {
     color: red;
 }
-.warning {
+.message {
     font-weight: bold;
     font-size: 14px;
-    color: red;
-    height: 15px;
+    height: 20px;
     width: 100%;
     float: left;
 }
 .result {
-    font-weight: bold;
-    font-size: 14px;
-    color: black;
-    height: 20px;
-    width: 100%;
-    float: left;
-
+    color: red;
+}
+#warning {
+    color: red;
 }
 .submit-div {
     margin-top: 10px;

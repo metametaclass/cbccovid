@@ -6,7 +6,7 @@ function validate(name, min, max) {
   var text = input.val().replace(',', '.');
   var value = parseFloat(text, 10);
   var label = $("#text-"+name);
-  $(".result").empty();
+  $("#result").empty();
   if (isNaN(value)) {
     //$(name).setCustomValidity("Enter a number");
     console.warn("invalid number in", name);
@@ -162,7 +162,7 @@ $(document).ready(function(){
 
      hasError = false;
      $("#warning").text("");
-
+     $("#result").removeClass("result");
      //var age = parseInt($("#age").text(), 10);
      var age = validate("age", 0, 150);
      var hb = validate("hb", 0, 1000)/10;
@@ -196,7 +196,7 @@ $(document).ready(function(){
               findRange1("basophils", basophils, basophilsTable);
     var result = findRange(points, probabilityTable);
     var resultText = (points>181)?" высокая, ": " низкая, ";
-     $("#result").text("Результат: "+points.toString()+", вероятность COVID-19 " + resultText + result + "%");
-
+    $("#result").text("Результат: "+points.toString()+", вероятность COVID-19 " + resultText + result + "%");
+    if (points>181) { $("#result").addClass("result"); }
   });
 });
